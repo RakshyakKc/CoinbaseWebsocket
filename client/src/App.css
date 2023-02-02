@@ -1,0 +1,36 @@
+.cryptoBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.cryptoWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  cursor: pointer;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+}
+.priceBox {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.matchContainer {
+  display: flex;
+  flex-direction: column;
+}
+.matchBox {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+.price {
+  margin-right: 180px;
+}
