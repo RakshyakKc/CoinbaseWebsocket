@@ -47,14 +47,14 @@ function handleMessage(message, userId) {
     switch (dataFromClient.type) {
         case 'subscribe':
             if(!users[userId].product_ids.includes(dataFromClient.product_id)){
-                users[userId].product_ids.push(...dataFromClient.product_ids)
+                users[userId].product_ids.push(dataFromClient.product_id)
             }
             break;
         case 'unsubscribe':
             if(users[userId].product_ids.includes(dataFromClient.product_id)){
                 users[userId].product_ids.splice(users[userId].product_ids.indexOf(dataFromClient.product_id))
             }
-    
+            break;
         default:
             break;
     }
