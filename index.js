@@ -36,6 +36,7 @@ function getCoinbaseData() {
         for(let userId in clients) {
             if(users[userId].product_ids.includes(dataFromCoinbase.product_id)){
                 clients[userId].send(JSON.stringify(dataFromCoinbase))
+
             }
         }
     })
@@ -85,6 +86,7 @@ wsServer.on('connection', function(connection) {
     // User disconnects
     connection.on('close', () => handleDisconnect(userId))
 
-    //call function to send data to users
-    getCoinbaseData()
 })
+
+//call function to send data to users
+getCoinbaseData()
